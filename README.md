@@ -6,7 +6,7 @@ Of course, some corners were intentionally cut. It goes without many features mo
 
 Additionally, in an attempt to keep the code concise, some of the code is cryptic (specifically the arguments passed to XMoveResizeWindow).
 
-So, while tinywm is excellent way to convey the gist of window management, I felt I could contribute a version which would be instructive in different ways:
+So, while tinywm is an excellent way to convey the gist of window management, I felt I could contribute a version which would be instructive in different ways:
 
 * Spell out things a bit more, which requires more lines of code but is easier to read.
 * Fix the sluggish resizing bug by creating an opaque, phony window for the purpose of resizing. This also demonstrates how to create, map, and unmap windows.
@@ -14,5 +14,3 @@ So, while tinywm is excellent way to convey the gist of window management, I fel
 * Use the XCB library, which drastically cuts the already tiny resource usage of tinywm. This also demonstrates the library used by most modern window managers.
 
 Otherwise, it is identical in functionality to the original tinywm.
-
-Though this version requires four times as much code as tinywm, I believe it is easier to read, fixes bugs, and demonstrates a few more window management concepts.
