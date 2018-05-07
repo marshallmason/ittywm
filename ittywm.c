@@ -101,7 +101,7 @@ void motion_notify(xcb_window_t window, xcb_button_t button, xcb_get_geometry_re
 // Replace the phony window with the real one, and complete the resize
 void replace_window(xcb_window_t window, xcb_window_t phony, const xcb_get_geometry_reply_t *geom)
 {
-    xcb_unmap_window(dpy, phony);
+    xcb_destroy_window(dpy, phony);
     const uint16_t value_mask = XCB_CONFIG_WINDOW_WIDTH | XCB_CONFIG_WINDOW_HEIGHT;
     const uint32_t value_list[] = { geom->width, geom->height };
     xcb_configure_window(dpy, window, value_mask, value_list);
